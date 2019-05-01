@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		04FF1ABB227A229B000B9864 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FF1ABA227A229B000B9864 /* Test.m */; };
-		04FF1ABE227A22C2000B9864 /* XlsxReaderWriter Mac in Resources */ = {isa = PBXBuildFile; fileRef = 04FF1ABC227A22C1000B9864 /* XlsxReaderWriter Mac */; };
-		04FF1ABF227A22C2000B9864 /* XlsxReaderWriter in Resources */ = {isa = PBXBuildFile; fileRef = 04FF1ABD227A22C2000B9864 /* XlsxReaderWriter */; };
-		04FF1AC1227A2359000B9864 /* ThirdParties in Resources */ = {isa = PBXBuildFile; fileRef = 04FF1AC0227A2359000B9864 /* ThirdParties */; };
 		1D67C3072278338A006BA166 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D67C3062278338A006BA166 /* AppDelegate.swift */; };
 		1D67C3092278338A006BA166 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D67C3082278338A006BA166 /* ViewController.swift */; };
 		1D67C30B227833A6006BA166 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D67C30A227833A6006BA166 /* Assets.xcassets */; };
@@ -19,12 +16,34 @@
 		F647F926FC5CF16DC4A34971 /* Pods_CreateFolders.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFBF7FC189A217FE6644E89 /* Pods_CreateFolders.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		04FF1AC8227A2452000B9864 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04FF1AC2227A2452000B9864 /* XlsxReaderWriter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 45B6E23A1A148F7500288A78;
+			remoteInfo = XlsxReaderWriter;
+		};
+		04FF1ACA227A2452000B9864 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04FF1AC2227A2452000B9864 /* XlsxReaderWriter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 45B6E2451A148F7500288A78;
+			remoteInfo = XlsxReaderWriterTests;
+		};
+		04FF1ACC227A2452000B9864 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04FF1AC2227A2452000B9864 /* XlsxReaderWriter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 22156D581C46B42500BB5779;
+			remoteInfo = "XlsxReaderWriter Mac";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		04FF1AB9227A229A000B9864 /* CreateFolders-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CreateFolders-Bridging-Header.h"; sourceTree = "<group>"; };
 		04FF1ABA227A229B000B9864 /* Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
-		04FF1ABC227A22C1000B9864 /* XlsxReaderWriter Mac */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "XlsxReaderWriter Mac"; sourceTree = "<group>"; };
-		04FF1ABD227A22C2000B9864 /* XlsxReaderWriter */ = {isa = PBXFileReference; lastKnownFileType = folder; path = XlsxReaderWriter; sourceTree = "<group>"; };
-		04FF1AC0227A2359000B9864 /* ThirdParties */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ThirdParties; sourceTree = "<group>"; };
+		04FF1AC2227A2452000B9864 /* XlsxReaderWriter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = XlsxReaderWriter.xcodeproj; path = "../../../../../../Downloads/FolderCreationWorkflow/XlsxReaderWriter-master/XlsxReaderWriter.xcodeproj"; sourceTree = "<group>"; };
 		1D67C3032278338A006BA166 /* CreateFolders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreateFolders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D67C3062278338A006BA166 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D67C3082278338A006BA166 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +68,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04FF1AC3227A2452000B9864 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04FF1AC9227A2452000B9864 /* libXlsxReaderWriter.a */,
+				04FF1ACB227A2452000B9864 /* XlsxReaderWriterTests.xctest */,
+				04FF1ACD227A2452000B9864 /* XlsxReaderWriter.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		1D67C2FA2278338A006BA166 = {
 			isa = PBXGroup;
 			children = (
@@ -70,9 +99,6 @@
 		1D67C3052278338A006BA166 /* CreateFolders */ = {
 			isa = PBXGroup;
 			children = (
-				04FF1AC0227A2359000B9864 /* ThirdParties */,
-				04FF1ABD227A22C2000B9864 /* XlsxReaderWriter */,
-				04FF1ABC227A22C1000B9864 /* XlsxReaderWriter Mac */,
 				1D67C3062278338A006BA166 /* AppDelegate.swift */,
 				1D67C3082278338A006BA166 /* ViewController.swift */,
 				1D67C30A227833A6006BA166 /* Assets.xcassets */,
@@ -97,6 +123,7 @@
 		2B319416CDD9F5E96C361E4D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04FF1AC2227A2452000B9864 /* XlsxReaderWriter.xcodeproj */,
 				5DFBF7FC189A217FE6644E89 /* Pods_CreateFolders.framework */,
 			);
 			name = Frameworks;
@@ -151,6 +178,12 @@
 			mainGroup = 1D67C2FA2278338A006BA166;
 			productRefGroup = 1D67C3042278338A006BA166 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 04FF1AC3227A2452000B9864 /* Products */;
+					ProjectRef = 04FF1AC2227A2452000B9864 /* XlsxReaderWriter.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1D67C3022278338A006BA166 /* CreateFolders */,
@@ -158,15 +191,36 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		04FF1AC9227A2452000B9864 /* libXlsxReaderWriter.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libXlsxReaderWriter.a;
+			remoteRef = 04FF1AC8227A2452000B9864 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		04FF1ACB227A2452000B9864 /* XlsxReaderWriterTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = XlsxReaderWriterTests.xctest;
+			remoteRef = 04FF1ACA227A2452000B9864 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		04FF1ACD227A2452000B9864 /* XlsxReaderWriter.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = XlsxReaderWriter.framework;
+			remoteRef = 04FF1ACC227A2452000B9864 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		1D67C3012278338A006BA166 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04FF1ABE227A22C2000B9864 /* XlsxReaderWriter Mac in Resources */,
-				04FF1ABF227A22C2000B9864 /* XlsxReaderWriter in Resources */,
 				1D67C3162278367A006BA166 /* Info.plist in Resources */,
-				04FF1AC1227A2359000B9864 /* ThirdParties in Resources */,
 				1D67C30B227833A6006BA166 /* Assets.xcassets in Resources */,
 				1D67C30E227833A6006BA166 /* Main.storyboard in Resources */,
 			);
