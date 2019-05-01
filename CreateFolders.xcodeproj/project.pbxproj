@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04FF1ABB227A229B000B9864 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FF1ABA227A229B000B9864 /* Test.m */; };
 		1D67C3072278338A006BA166 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D67C3062278338A006BA166 /* AppDelegate.swift */; };
 		1D67C3092278338A006BA166 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D67C3082278338A006BA166 /* ViewController.swift */; };
 		1D67C30B227833A6006BA166 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D67C30A227833A6006BA166 /* Assets.xcassets */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04FF1AB9227A229A000B9864 /* CreateFolders-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CreateFolders-Bridging-Header.h"; sourceTree = "<group>"; };
+		04FF1ABA227A229B000B9864 /* Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 		1D67C3032278338A006BA166 /* CreateFolders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreateFolders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D67C3062278338A006BA166 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D67C3082278338A006BA166 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +70,8 @@
 				1D67C30C227833A6006BA166 /* Main.storyboard */,
 				1D67C30F227833A6006BA166 /* Info.plist */,
 				1D67C310227833A6006BA166 /* CreateFolders.entitlements */,
+				04FF1ABA227A229B000B9864 /* Test.m */,
+				04FF1AB9227A229A000B9864 /* CreateFolders-Bridging-Header.h */,
 			);
 			path = CreateFolders;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 				TargetAttributes = {
 					1D67C3022278338A006BA166 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -204,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FF1ABB227A229B000B9864 /* Test.m in Sources */,
 				1D67C3092278338A006BA166 /* ViewController.swift in Sources */,
 				1D67C3072278338A006BA166 /* AppDelegate.swift in Sources */,
 			);
@@ -343,6 +350,7 @@
 			baseConfigurationReference = 8555ABBB176C3C6B2F77E8EC /* Pods-CreateFolders.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CreateFolders/CreateFolders.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -355,6 +363,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dei.apps.CreateFolders;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CreateFolders/CreateFolders-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -364,6 +374,7 @@
 			baseConfigurationReference = 9ACBBBAC0E52AFBB8E42186A /* Pods-CreateFolders.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CreateFolders/CreateFolders.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -376,6 +387,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dei.apps.CreateFolders;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CreateFolders/CreateFolders-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
