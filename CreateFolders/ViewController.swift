@@ -8,6 +8,7 @@
 
 import Cocoa
 import CoreXLSX
+//import BRAOfficeDocumentPackage
 
 class ViewController: NSViewController {
     
@@ -82,7 +83,18 @@ class ViewController: NSViewController {
 //        } else {
 //            processData()
 //        }
-        processData()
+        processData1()
+    }
+    
+    func processData1 () {
+        var spreadsheet: BRAOfficeDocumentPackage = BRAOfficeDocumentPackage.open(excelPath)
+        if let array = spreadsheet.workbook.sheets as? Array<BRASheet> {
+            for sheet in array {
+                print(sheet.name)
+            }
+        }
+        
+        
     }
     
     func processData () {
