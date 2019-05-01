@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		04FF1ABB227A229B000B9864 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FF1ABA227A229B000B9864 /* Test.m */; };
+		04FF1ABE227A22C2000B9864 /* XlsxReaderWriter Mac in Resources */ = {isa = PBXBuildFile; fileRef = 04FF1ABC227A22C1000B9864 /* XlsxReaderWriter Mac */; };
+		04FF1ABF227A22C2000B9864 /* XlsxReaderWriter in Resources */ = {isa = PBXBuildFile; fileRef = 04FF1ABD227A22C2000B9864 /* XlsxReaderWriter */; };
+		04FF1AC1227A2359000B9864 /* ThirdParties in Resources */ = {isa = PBXBuildFile; fileRef = 04FF1AC0227A2359000B9864 /* ThirdParties */; };
 		1D67C3072278338A006BA166 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D67C3062278338A006BA166 /* AppDelegate.swift */; };
 		1D67C3092278338A006BA166 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D67C3082278338A006BA166 /* ViewController.swift */; };
 		1D67C30B227833A6006BA166 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D67C30A227833A6006BA166 /* Assets.xcassets */; };
@@ -19,6 +22,9 @@
 /* Begin PBXFileReference section */
 		04FF1AB9227A229A000B9864 /* CreateFolders-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CreateFolders-Bridging-Header.h"; sourceTree = "<group>"; };
 		04FF1ABA227A229B000B9864 /* Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
+		04FF1ABC227A22C1000B9864 /* XlsxReaderWriter Mac */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "XlsxReaderWriter Mac"; sourceTree = "<group>"; };
+		04FF1ABD227A22C2000B9864 /* XlsxReaderWriter */ = {isa = PBXFileReference; lastKnownFileType = folder; path = XlsxReaderWriter; sourceTree = "<group>"; };
+		04FF1AC0227A2359000B9864 /* ThirdParties */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ThirdParties; sourceTree = "<group>"; };
 		1D67C3032278338A006BA166 /* CreateFolders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreateFolders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D67C3062278338A006BA166 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D67C3082278338A006BA166 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +70,9 @@
 		1D67C3052278338A006BA166 /* CreateFolders */ = {
 			isa = PBXGroup;
 			children = (
+				04FF1AC0227A2359000B9864 /* ThirdParties */,
+				04FF1ABD227A22C2000B9864 /* XlsxReaderWriter */,
+				04FF1ABC227A22C1000B9864 /* XlsxReaderWriter Mac */,
 				1D67C3062278338A006BA166 /* AppDelegate.swift */,
 				1D67C3082278338A006BA166 /* ViewController.swift */,
 				1D67C30A227833A6006BA166 /* Assets.xcassets */,
@@ -154,7 +163,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FF1ABE227A22C2000B9864 /* XlsxReaderWriter Mac in Resources */,
+				04FF1ABF227A22C2000B9864 /* XlsxReaderWriter in Resources */,
 				1D67C3162278367A006BA166 /* Info.plist in Resources */,
+				04FF1AC1227A2359000B9864 /* ThirdParties in Resources */,
 				1D67C30B227833A6006BA166 /* Assets.xcassets in Resources */,
 				1D67C30E227833A6006BA166 /* Main.storyboard in Resources */,
 			);
