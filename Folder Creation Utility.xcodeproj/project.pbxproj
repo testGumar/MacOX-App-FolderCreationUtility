@@ -183,7 +183,7 @@
 		04FF1AB9227A229A000B9864 /* CreateFolders-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CreateFolders-Bridging-Header.h"; sourceTree = "<group>"; };
 		04FF1ABA227A229B000B9864 /* Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 		04FF1AC2227A2452000B9864 /* XlsxReaderWriter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = XlsxReaderWriter.xcodeproj; path = "../../../../../../Downloads/FolderCreationWorkflow/XlsxReaderWriter-master/XlsxReaderWriter.xcodeproj"; sourceTree = "<group>"; };
-		1D67C3032278338A006BA166 /* CreateFolders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreateFolders.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D67C3032278338A006BA166 /* Folder Creation Utility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Folder Creation Utility.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D67C3062278338A006BA166 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D67C3082278338A006BA166 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1D67C30A227833A6006BA166 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -353,7 +353,7 @@
 		1D67C3042278338A006BA166 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D67C3032278338A006BA166 /* CreateFolders.app */,
+				1D67C3032278338A006BA166 /* Folder Creation Utility.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -399,9 +399,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D67C3022278338A006BA166 /* CreateFolders */ = {
+		1D67C3022278338A006BA166 /* Folder Creation Utility */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D67C313227833A6006BA166 /* Build configuration list for PBXNativeTarget "CreateFolders" */;
+			buildConfigurationList = 1D67C313227833A6006BA166 /* Build configuration list for PBXNativeTarget "Folder Creation Utility" */;
 			buildPhases = (
 				6E61CC5A01EBCC9460C8F9B9 /* [CP] Check Pods Manifest.lock */,
 				1D67C2FF2278338A006BA166 /* Sources */,
@@ -414,9 +414,9 @@
 			);
 			dependencies = (
 			);
-			name = CreateFolders;
+			name = "Folder Creation Utility";
 			productName = CreateFolders;
-			productReference = 1D67C3032278338A006BA166 /* CreateFolders.app */;
+			productReference = 1D67C3032278338A006BA166 /* Folder Creation Utility.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -435,7 +435,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1D67C2FE2278338A006BA166 /* Build configuration list for PBXProject "CreateFolders" */;
+			buildConfigurationList = 1D67C2FE2278338A006BA166 /* Build configuration list for PBXProject "Folder Creation Utility" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -454,7 +454,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				1D67C3022278338A006BA166 /* CreateFolders */,
+				1D67C3022278338A006BA166 /* Folder Creation Utility */,
 			);
 		};
 /* End PBXProject section */
@@ -788,7 +788,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D67C2FE2278338A006BA166 /* Build configuration list for PBXProject "CreateFolders" */ = {
+		1D67C2FE2278338A006BA166 /* Build configuration list for PBXProject "Folder Creation Utility" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D67C311227833A6006BA166 /* Debug */,
@@ -797,7 +797,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1D67C313227833A6006BA166 /* Build configuration list for PBXNativeTarget "CreateFolders" */ = {
+		1D67C313227833A6006BA166 /* Build configuration list for PBXNativeTarget "Folder Creation Utility" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D67C314227833A6006BA166 /* Debug */,
