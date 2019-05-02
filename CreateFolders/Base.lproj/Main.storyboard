@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
         <capability name="System colors introduced in macOS 10.13" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -675,7 +676,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="CreateFolders" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Folder_Creation_Utility" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -705,7 +706,7 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="CreateFolders" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Folder_Creation_Utility" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="854" height="657"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -830,7 +831,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="doneAction:" target="XfG-lQ-9wD" id="dxa-dr-VDt"/>
+                                    <action selector="clearAction:" target="XfG-lQ-9wD" id="gXd-Go-96J"/>
                                 </connections>
                             </button>
                             <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="8z3-yt-R83">
@@ -880,6 +881,7 @@
                     </view>
                     <connections>
                         <outlet property="btnBrowse" destination="2Av-A0-GSn" id="HhP-1S-cQ1"/>
+                        <outlet property="btnClear" destination="ssJ-Ss-sAM" id="9dO-0v-YGo"/>
                         <outlet property="btnDone" destination="DmT-8z-pzQ" id="MsN-BT-F4c"/>
                         <outlet property="progress" destination="8z3-yt-R83" id="JPb-bY-HU7"/>
                         <outlet property="tfError" destination="tch-BG-X58" id="7vf-G6-Gij"/>

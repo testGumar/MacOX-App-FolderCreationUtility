@@ -20,6 +20,7 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var btnBrowse: NSButton!
     @IBOutlet weak var btnDone: NSButton!
+    @IBOutlet weak var btnClear: NSButton!
     
     @IBOutlet weak var tfJobNumber: NSTextField!
     @IBOutlet weak var tfSchoolName: NSTextField!
@@ -57,6 +58,10 @@ class ViewController: NSViewController {
             }
         }
         
+    }
+    
+    @IBAction func clearAction(_ sender: Any) {   
+       tfError.stringValue = ""
     }
     
     @IBAction func browseAction(_ sender: Any) {
