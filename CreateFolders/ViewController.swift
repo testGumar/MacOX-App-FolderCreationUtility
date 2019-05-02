@@ -87,12 +87,28 @@ class ViewController: NSViewController {
     }
     
     func processData1 () {
-        var spreadsheet: BRAOfficeDocumentPackage = BRAOfficeDocumentPackage.open(excelPath)
-        if let array = spreadsheet.workbook.sheets as? Array<BRASheet> {
-            for sheet in array {
-                print(sheet.name)
+        let spreadsheet: BRAOfficeDocumentPackage = BRAOfficeDocumentPackage.open(excelPath)
+        guard let worksheets = spreadsheet.workbook.worksheets as? Array<BRAWorksheet> else { return }
+        for ws in worksheets {
+            guard let rows = ws.rows as? Array<BRARow> else { return }
+            guard let cols = ws.columns as? Array<BRAColumn> else { return }
+            print("rows count = ", rows.count)
+            print("cols count = ", cols.count)
+            if rows.count <= 0 && cols.count <= 0 {
+                return
             }
+            for r in 1...rows.count {
+                for c in 1...cols.count {
+                    guard let col_index = BRAColumn.columnName(forColumnIndex: c) else {continue}
+                    guard let content = ws.cell(forCellReference: "\(col_index)\(r)")?.stringValue() else {continue}
+                    print(content)
+                }
+                
+                break
+            }
+            break
         }
+        
         
         
     }
