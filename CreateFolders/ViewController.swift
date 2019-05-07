@@ -60,7 +60,7 @@ class ViewController: NSViewController {
         
     }
     
-    @IBAction func clearAction(_ sender: Any) {   
+    @IBAction func clearAction(_ sender: Any) {
        tfError.stringValue = ""
     }
     
@@ -103,6 +103,9 @@ class ViewController: NSViewController {
             
             DispatchQueue.main.async {
                 self.progress.isHidden = true;
+                if (self.showSuccessAlert(title: "Folders are created successfully", msg: "See \(self.outputDirPath)")) {
+                    NSWorkspace.shared.selectFile(nil, inFileViewerRootedAtPath: self.outputDirPath)
+                }
             }
         }
     }
@@ -124,26 +127,31 @@ class ViewController: NSViewController {
                 return
             }
             
-            for r in 2...rows.count {
+            for r in 2...rows.count { // row
                 var path = ""
-                for c in 1...3 {
+                for c in 1...3 { // column
                     guard let col_index = BRAColumn.columnName(forColumnIndex: c) else {continue}
                     guard var content = ws.cell(forCellReference: "\(col_index)\(r)")?.stringValue() else {continue}
 //                    print(content)
                     if !content.isEmpty && content.count >= 3 {
                         content = content.trim().replaceSpacewithUnderscore()
+                        //path.append("/"+jobNumber+"_"+content)
+                        
+                        if (c == 1) {
+                            let tempPath = path+"/"+jobNumber+"_class_"+content
+                            path.append("/")
+                            do {
+                                print("path", classFolderPath + tempPath)
+                                try filemgr.createDirectory(atPath: classFolderPath+tempPath, withIntermediateDirectories: true, attributes: nil)
+                            } catch let er {
+                                print(er)
+                                tfError.stringValue = tfError.stringValue + "\n" + er.localizedDescription
+                            }
+                        }
                         path.append("/"+jobNumber+"_"+content)
+                        
                     }
                     
-                    if (c == 1) {
-                        do {
-                            print("path", outputDirPath + path)
-                            try filemgr.createDirectory(atPath: classFolderPath + path, withIntermediateDirectories: true, attributes: nil)
-                        } catch let er {
-                            print(er)
-                            tfError.stringValue = tfError.stringValue + "\n" + er.localizedDescription
-                        }
-                    }
                 }
                 
                 do {
@@ -241,6 +249,14 @@ class ViewController: NSViewController {
         alert.runModal()
     }
 
+    func showSuccessAlert (title:String, msg:String) -> Bool {
+        let alert = NSAlert.init()
+        alert.messageText = title
+        alert.informativeText = msg
+        alert.addButton(withTitle: "Open")
+        alert.addButton(withTitle: "Cancel")
+        return alert.runModal() == .alertFirstButtonReturn
+    }
 
 }
 
