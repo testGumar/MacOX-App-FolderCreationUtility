@@ -1,6 +1,6 @@
 # MacFolderCreation
 
-- License
+## License
 
 MIT License
 
