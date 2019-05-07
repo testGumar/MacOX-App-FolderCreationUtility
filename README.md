@@ -1,5 +1,7 @@
 # MacFolderCreation
 
+This app takes an excel file as input and parse that file and creates directories and sub directories hierarchy at the given path.
+
 ## License
 
 MIT License
