@@ -6,7 +6,7 @@ This app takes an excel file as input and parse that file and creates directorie
 
 MIT License
 
-Copyright (c) 2018 Shrikanth Ravi
+Copyright (c) 2018 Umar Sayyed
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
