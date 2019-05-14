@@ -57,7 +57,7 @@
 		1D67C30B227833A6006BA166 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D67C30A227833A6006BA166 /* Assets.xcassets */; };
 		1D67C30E227833A6006BA166 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D67C30C227833A6006BA166 /* Main.storyboard */; };
 		1D67C3162278367A006BA166 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D67C30F227833A6006BA166 /* Info.plist */; };
-		F647F926FC5CF16DC4A34971 /* Pods_CreateFolders.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFBF7FC189A217FE6644E89 /* Pods_CreateFolders.framework */; };
+		A72205C7CC6757F0CF51C4B4 /* Pods_Folder_Creation_Utility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0704EE41C6ADF91CEBCBE762 /* Pods_Folder_Creation_Utility.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -183,6 +183,7 @@
 		04FF1AB9227A229A000B9864 /* CreateFolders-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CreateFolders-Bridging-Header.h"; sourceTree = "<group>"; };
 		04FF1ABA227A229B000B9864 /* Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 		04FF1AC2227A2452000B9864 /* XlsxReaderWriter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = XlsxReaderWriter.xcodeproj; path = "../../../../../../Downloads/FolderCreationWorkflow/XlsxReaderWriter-master/XlsxReaderWriter.xcodeproj"; sourceTree = "<group>"; };
+		0704EE41C6ADF91CEBCBE762 /* Pods_Folder_Creation_Utility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Folder_Creation_Utility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D67C3032278338A006BA166 /* Folder Creation Utility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Folder Creation Utility.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D67C3062278338A006BA166 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D67C3082278338A006BA166 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -191,8 +192,10 @@
 		1D67C30F227833A6006BA166 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D67C310227833A6006BA166 /* CreateFolders.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CreateFolders.entitlements; sourceTree = "<group>"; };
 		5DFBF7FC189A217FE6644E89 /* Pods_CreateFolders.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CreateFolders.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D115E86F022B28C8B4F7A26 /* Pods-Folder Creation Utility.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Folder Creation Utility.release.xcconfig"; path = "Pods/Target Support Files/Pods-Folder Creation Utility/Pods-Folder Creation Utility.release.xcconfig"; sourceTree = "<group>"; };
 		8555ABBB176C3C6B2F77E8EC /* Pods-CreateFolders.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreateFolders.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CreateFolders/Pods-CreateFolders.debug.xcconfig"; sourceTree = "<group>"; };
 		9ACBBBAC0E52AFBB8E42186A /* Pods-CreateFolders.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreateFolders.release.xcconfig"; path = "Pods/Target Support Files/Pods-CreateFolders/Pods-CreateFolders.release.xcconfig"; sourceTree = "<group>"; };
+		FCF69BD96D11B6DFADF9D5AC /* Pods-Folder Creation Utility.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Folder Creation Utility.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Folder Creation Utility/Pods-Folder Creation Utility.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,7 +203,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F647F926FC5CF16DC4A34971 /* Pods_CreateFolders.framework in Frameworks */,
+				A72205C7CC6757F0CF51C4B4 /* Pods_Folder_Creation_Utility.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +386,8 @@
 			children = (
 				8555ABBB176C3C6B2F77E8EC /* Pods-CreateFolders.debug.xcconfig */,
 				9ACBBBAC0E52AFBB8E42186A /* Pods-CreateFolders.release.xcconfig */,
+				FCF69BD96D11B6DFADF9D5AC /* Pods-Folder Creation Utility.debug.xcconfig */,
+				7D115E86F022B28C8B4F7A26 /* Pods-Folder Creation Utility.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -392,6 +397,7 @@
 			children = (
 				04FF1AC2227A2452000B9864 /* XlsxReaderWriter.xcodeproj */,
 				5DFBF7FC189A217FE6644E89 /* Pods_CreateFolders.framework */,
+				0704EE41C6ADF91CEBCBE762 /* Pods_Folder_Creation_Utility.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -409,6 +415,7 @@
 				1D67C3012278338A006BA166 /* Resources */,
 				B2A99A40A41A9AF6A8D2B42D /* [CP] Embed Pods Frameworks */,
 				8E532F9FB0D8853845C0F3D9 /* [CP] Copy Pods Resources */,
+				1DA336462282ACEE00BDE81E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -497,6 +504,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1DA336462282ACEE00BDE81E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/Fabric/run\" fca8a1f543c1d17bfaba64971cc9864b7edebaac 14026d1fbbeb8dce75f3f44b7fa3c8624bb42805273a7494da88b7b719055207\n";
+		};
 		6E61CC5A01EBCC9460C8F9B9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -508,7 +533,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CreateFolders-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Folder Creation Utility-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -527,7 +552,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CreateFolders/Pods-CreateFolders-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Folder Creation Utility/Pods-Folder Creation Utility-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B2A99A40A41A9AF6A8D2B42D /* [CP] Embed Pods Frameworks */ = {
@@ -549,7 +574,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CreateFolders/Pods-CreateFolders-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Folder Creation Utility/Pods-Folder Creation Utility-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -740,7 +765,7 @@
 		};
 		1D67C314227833A6006BA166 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8555ABBB176C3C6B2F77E8EC /* Pods-CreateFolders.debug.xcconfig */;
+			baseConfigurationReference = FCF69BD96D11B6DFADF9D5AC /* Pods-Folder Creation Utility.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -748,7 +773,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = UYPYN89689;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				INFOPLIST_FILE = CreateFolders/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -765,7 +790,7 @@
 		};
 		1D67C315227833A6006BA166 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9ACBBBAC0E52AFBB8E42186A /* Pods-CreateFolders.release.xcconfig */;
+			baseConfigurationReference = 7D115E86F022B28C8B4F7A26 /* Pods-Folder Creation Utility.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -773,7 +798,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = UYPYN89689;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				INFOPLIST_FILE = CreateFolders/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

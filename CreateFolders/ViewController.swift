@@ -7,11 +7,14 @@
 //
 
 import Cocoa
+import Fabric
+import Crashlytics
 //import CoreXLSX
 
 class ViewController: NSViewController {
     
     fileprivate var excelPath: String = ""
+    fileprivate var selectedDirPath: String = ""
     fileprivate var outputDirPath: String = ""
     fileprivate var classFolderPath: String = ""
     fileprivate var studentFolderPath: String = ""
@@ -42,9 +45,9 @@ class ViewController: NSViewController {
 
         // Do any additional setup after loading the view.
         progress.style = .spinning
-        
-        
     }
+    
+    
     @IBAction func outputAction(_ sender: Any) {   let panel = NSOpenPanel()
         panel.canChooseFiles = false;
         panel.canChooseDirectories = true;
@@ -52,21 +55,24 @@ class ViewController: NSViewController {
         
         if panel.runModal() == .OK {
             for file in panel.urls {
-                outputDirPath = file.path
-                tfOutputDirPath.stringValue = outputDirPath
+                selectedDirPath = file.path
+                tfOutputDirPath.stringValue = selectedDirPath
                 print("file path - ", file.path)
             }
         }
-        
     }
+    
     
     @IBAction func clearAction(_ sender: Any) {
-       tfError.stringValue = ""
+        tfError.stringValue = ""
     }
     
-    @IBAction func browseAction(_ sender: Any) {
-        
-        let panel = NSOpenPanel()
+    @IBAction func copyAction(_ sender: Any) {  let pasteBoard = NSPasteboard.general
+        pasteBoard.clearContents()
+        pasteBoard.setString(tfError.stringValue, forType: .string)
+    }
+    
+    @IBAction func browseAction(_ sender: Any) { let panel = NSOpenPanel()
         panel.canChooseFiles = true;
         panel.canChooseDirectories = false;
         panel.allowedFileTypes = ["xl","xls", "xlsx"]
@@ -90,7 +96,7 @@ class ViewController: NSViewController {
             showAlert(title: "School Name is required", msg: "Enter valid school name.")
         } else if (excelPath.isEmpty) {
             showAlert(title: "Excel is required", msg: "Select valid excel file.")
-        } else if (outputDirPath.isEmpty) {
+        } else if (selectedDirPath.isEmpty) {
             showAlert(title: "Output Directory is required", msg: "Select output directory.")
         } else {
             
@@ -98,11 +104,10 @@ class ViewController: NSViewController {
             
             jobNumber = jobNumber.trim().replaceSpacewithUnderscore()
             schoolName = schoolName.trim().replaceSpacewithUnderscore()
-            outputDirPath = outputDirPath+"/"+jobNumber+"_"+schoolName;
+            outputDirPath = selectedDirPath+"/"+jobNumber+"_"+schoolName;
             processData1()
             
-            DispatchQueue.main.async {
-                self.progress.isHidden = true;
+            DispatchQueue.main.async { self.progress.isHidden = true
                 if (self.showSuccessAlert(title: "Folders are created successfully", msg: "See \(self.outputDirPath)")) {
                     NSWorkspace.shared.selectFile(nil, inFileViewerRootedAtPath: self.outputDirPath)
                 }
@@ -123,7 +128,7 @@ class ViewController: NSViewController {
             guard let cols = ws.columns as? Array<BRAColumn> else { return }
             print("rows count = ", rows.count)
             print("cols count = ", cols.count)
-            if rows.count <= 2 && cols.count <= 1 {
+            if rows.count <= 2 || cols.count <= 1 {
                 return
             }
             
@@ -133,18 +138,15 @@ class ViewController: NSViewController {
                     guard let col_index = BRAColumn.columnName(forColumnIndex: c) else {continue}
                     guard var content = ws.cell(forCellReference: "\(col_index)\(r)")?.stringValue() else {continue}
 //                    print(content)
-                    if !content.isEmpty && content.count >= 3 {
+                    if !content.isEmpty && content.count >= 1 && content.isAlphanumericWithSpace {
                         content = content.trim().replaceSpacewithUnderscore()
                         //path.append("/"+jobNumber+"_"+content)
                         
-                        if (c == 1) {
-                            let tempPath = path+"/"+jobNumber+"_class_"+content
+                        if (c == 1) { let tempPath = path+"/"+jobNumber+"_class_"+content
                             path.append("/")
-                            do {
-                                print("path", classFolderPath + tempPath)
+                            do { print("path", classFolderPath + tempPath)
                                 try filemgr.createDirectory(atPath: classFolderPath+tempPath, withIntermediateDirectories: true, attributes: nil)
-                            } catch let er {
-                                print(er)
+                            } catch let er { print(er)
                                 tfError.stringValue = tfError.stringValue + "\n" + er.localizedDescription
                             }
                         }
@@ -154,11 +156,9 @@ class ViewController: NSViewController {
                     
                 }
                 
-                do {
-                    print("path", outputDirPath + path)
+                do { print("path", outputDirPath + path)
                     try filemgr.createDirectory(atPath: studentFolderPath + path, withIntermediateDirectories: true, attributes: nil)
-                } catch let er {
-                    print(er)
+                } catch let er { print(er)
                     tfError.stringValue = tfError.stringValue + "\n" + er.localizedDescription
                 }
                 //break
@@ -171,7 +171,6 @@ class ViewController: NSViewController {
     }
     
     func createOuterFolders () {
-        
         
         for folder in FOLDER_NAMES {
             let newPath = outputDirPath + "/" + jobNumber + "_" + folder
@@ -267,6 +266,22 @@ extension String {
     }
     func trim () -> String {
         return self.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+    
+    var isAlphanumericWithSpace: Bool {
+        return !isEmpty && range(of: "[^a-zA-Z0-9\\s]", options: .regularExpression) == nil
+    }
+    
+    var isAlphanumeric: Bool {
+        return !isEmpty && range(of: "[^a-zA-Z0-9]", options: .regularExpression) == nil
+    }
+    
+    var isAlphabetWithSpace: Bool {
+        return !isEmpty && range(of: "[^a-zA-Z\\s]", options: .regularExpression) == nil
+    }
+    
+    var isAlphabet: Bool {
+        return !isEmpty && range(of: "[^a-zA-Z]", options: .regularExpression) == nil
     }
 }
 
